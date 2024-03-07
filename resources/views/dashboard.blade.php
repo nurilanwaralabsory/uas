@@ -43,6 +43,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if ($buku->count() == 0)
+                                        <h3 class="text-center text-danger">Buku tidak ditemukan</h3>
+                                    @endif
                                     @foreach ($buku as $bk)
                                         <tr>
                                             <td class="align-middle text-center">

@@ -25,7 +25,7 @@ class FrontController extends Controller
 
     public function kebutuhan()
     {
-        $buku = Buku::orderBy('stok', 'asc')->first();
+        $buku = Buku::orderBy('stok', 'asc')->limit(1)->get();
         return view('kebutuhan', [
             'buku' => $buku
         ]);

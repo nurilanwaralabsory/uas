@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::post('/dashboard', [FrontController::class, 'index'])->middleware(['auth', 'verified']);
-Route::get('/kebutuhan', [FrontController::class, 'kebutuhan'])->middleware(['auth', 'verified']);
+Route::get('/kebutuhan', [FrontController::class, 'kebutuhan'])->middleware(['auth', 'verified'])->name('kebutuhan');
 
 Route::resource('buku', BukuController::class)->middleware(['auth', 'verified']);
 Route::resource('penerbit', PenerbitController::class)->middleware(['auth', 'verified']);
